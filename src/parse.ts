@@ -1,5 +1,5 @@
-import { filterMap, isDescribe, toStringLiteral } from './utils';
-import { JsDoc, makeTypeContentChild, makeTypeContentRoot, Settings, TypeContent, TypeContentRoot } from './types';
+import { filterMap, isDescribe, toStringLiteral } from './utils.js';
+import { JsDoc, makeTypeContentChild, makeTypeContentRoot, Settings, TypeContent, TypeContentRoot } from './types.js';
 import {
   AlternativesDescribe,
   ArrayDescribe,
@@ -8,15 +8,15 @@ import {
   Describe,
   ObjectDescribe,
   StringDescribe
-} from './joiDescribeTypes';
+} from './joiDescribeTypes.js';
 import {
   getAllowValues,
   getDisableDescription,
   getInterfaceOrTypeName,
   getIsReadonly,
   getMetadataFromDetails
-} from './joiUtils';
-import { getIndentStr, getJsDocString } from './write';
+} from './joiUtils.js';
+import { getIndentStr, getJsDocString } from './write.js';
 import util from 'node:util'; // see __tests__/joiTypes.ts for more information
 
 // see __tests__/joiTypes.ts for more information

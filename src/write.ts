@@ -4,7 +4,7 @@
 import { writeFileSync } from 'fs';
 import Path from 'path';
 
-import { JsDoc, Settings } from './types';
+import { JsDoc, Settings } from './types.js';
 
 /**
  * Write index.ts file
