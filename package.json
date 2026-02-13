@@ -1,5 +1,5 @@
 {
-  "name": "joi-to-typescript",
+  "name": "@x-dome/joi-to-typescript",
   "description": "Convert Joi Schemas to TypeScript interfaces",
   "version": "5.0.1",
   "author": "Jono Clarnette",
