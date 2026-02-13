@@ -137,6 +137,8 @@ export interface Settings {
    * If defined, place every member of a tuple on a new line
    */
   readonly tupleNewLine?: boolean;
+
+  readonly namedInterfaceIgnoreList?: string[];
 }
 
 export class InputFileFilter {

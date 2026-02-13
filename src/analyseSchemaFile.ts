@@ -85,14 +85,16 @@ export async function analyseSchemaFile(
   const fullOutputFilePath = Path.join(settings.typeOutputDirectory, typeFileName);
 
   for (const exportedName in schemaFile) {
-    const joiSchema = schemaFile[exportedName];
+    if(!settings.namedInterfaceIgnoreList?.includes(exportedName)){
+      const joiSchema = schemaFile[exportedName];
 
-    if (!Joi.isSchema(joiSchema)) {
-      continue;
-    }
-    const convertedType = convertSchemaInternal(settings, joiSchema, exportedName, true);
-    if (convertedType) {
-      allConvertedTypes.push({ ...convertedType, location: fullOutputFilePath });
+      if (!Joi.isSchema(joiSchema)) {
+        continue;
+      }
+      const convertedType = convertSchemaInternal(settings, joiSchema, exportedName, true);
+      if (convertedType) {
+        allConvertedTypes.push({ ...convertedType, location: fullOutputFilePath });
+      }
     }
   }
 

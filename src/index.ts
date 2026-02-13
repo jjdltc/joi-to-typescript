@@ -36,6 +36,7 @@ function defaultSettings(settings: Partial<Settings>): Settings {
       supplyDefaultsInType: false,
       inputFileFilter: InputFileFilter.Default,
       omitIndexFiles: false,
+      namedInterfaceIgnoreList: [],
     },
     settings
   ) as Settings;
